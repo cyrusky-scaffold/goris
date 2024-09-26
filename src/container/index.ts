@@ -1,7 +1,7 @@
 import { Container } from "inversify";
-import { ServiceNames } from "../constants/ServiceNames";
-import { CommandRegister } from "../command/commandRegister";
-import { CommandPrompt } from "../command/commandPrompt";
+import { ServiceNames } from "@/constants/ServiceNames";
+import { CommandRegister } from "@/command/commandRegister";
+import { CommandPrompt } from "@/command/commandPrompt";
 
 export class IOC {
   static instance: IOC;
