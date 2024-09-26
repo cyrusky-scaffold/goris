@@ -9,7 +9,7 @@ esbuild
     platform: "node",
     bundle: true,
     minify: true,
-    sourcemap: true,
+    sourcemap: false,
   })
   .then(() => {
     console.log("Build complete");

@@ -1,13 +1,10 @@
 {
-  "name": "@bor/boris",
+  "name": "@borgor/boris",
   "version": "1.0.0",
   "description": "",
-  "private": false,
-  "main": "index.js",
+  "main": "build/index.js",
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/",
-    "git-checks": false
+    "access": "public"
   },
   "bin": {
     "boris": "./build/index.js"
@@ -27,8 +24,8 @@
     "koa",
     "nodejs"
   ],
-  "author": "Cyrusky <bo.jin@borgor.cn>",
-  "license": "ISC",
+  "author": "cyrusky <bo.jin@borgor.cn>",
+  "license": "MIT",
   "devDependencies": {
     "@esbuild-plugins/tsconfig-paths": "^0.1.2",
     "@eslint/js": "^9.11.1",
