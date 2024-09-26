@@ -5,7 +5,8 @@
   "main": "build/index.js",
   "publishConfig": {
     "access": "public",
-    "publish-branch": "production"
+    "publish-branch": "production",
+    "no-git-checks": false
   },
   "bin": {
     "goris": "bin/goris"
