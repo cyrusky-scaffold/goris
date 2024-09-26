@@ -25,6 +25,3 @@ jobs:
       - run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      - run: pnpm version patch
-      - run: git merge release main
-      - run: git push origin main
