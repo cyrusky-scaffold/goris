@@ -8,11 +8,11 @@
     "publish-branch": "production"
   },
   "bin": {
-    "boris": "./build/index.js"
+    "boris": "./dist/index.js"
   },
   "repository": "https://github.com/cyrusky-scaffold/scaffold.git",
   "files": [
-    "build",
+    "dist",
     "package.json"
   ],
   "scripts": {
@@ -49,6 +49,7 @@
   "dependencies": {
     "@octokit/rest": "^21.0.2",
     "axios": "^1.7.7",
+    "borgor-boris": "^1.0.0",
     "commander": "^12.1.0",
     "git-clone": "^0.2.0",
     "inquirer": "^11.0.2",
