@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      - run: corepack use pnpm
+      - run: corepack use pnpm@9
       - run: pnpm install
       - run: pnpm build
       - run: pnpm publish
