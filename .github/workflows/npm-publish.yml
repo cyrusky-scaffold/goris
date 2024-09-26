@@ -5,9 +5,9 @@ name: Node.js Package
 
 on:
   push:
-    branches: [ "release/*" ]
+    branches: [ "release" ]
   pull_request:
-    branches: [ "release/*" ]
+    branches: [ "release" ]
 
 jobs:
   publish-npm:
@@ -26,4 +26,5 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - run: pnpm version patch
-      - run: git push
+      - run: git merge release main
+      - run: git push origin main
