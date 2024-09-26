@@ -1,6 +1,6 @@
 {
-  "name": "borgor-boris",
-  "version": "1.0.2",
+  "name": "goris",
+  "version": "0.0.1",
   "description": "",
   "main": "build/index.js",
   "publishConfig": {
