@@ -8,7 +8,7 @@
     "publish-branch": "production"
   },
   "bin": {
-    "boris": "./bin/boris"
+    "goris": "bin/goris"
   },
   "repository": "https://github.com/cyrusky-scaffold/scaffold.git",
   "files": [

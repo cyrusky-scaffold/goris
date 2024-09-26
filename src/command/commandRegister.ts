@@ -27,7 +27,7 @@ export class CommandRegister {
 
   private initProgramInfo() {
     this.program
-      .name("boris")
+      .name("goris")
       .version("1.0.0")
       .description("A simple CLI to create projects");
   }
