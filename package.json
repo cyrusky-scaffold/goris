@@ -49,5 +49,6 @@
     "inversify": "^6.0.2",
     "ora": "^5.4.1",
     "reflect-metadata": "^0.2.2"
-  }
+  },
+  "packageManager": "pnpm@9.11.0"
 }
