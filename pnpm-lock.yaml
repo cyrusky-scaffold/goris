@@ -14,9 +14,6 @@ importers:
       axios:
         specifier: ^1.7.7
         version: 1.7.7
-      borgor-boris:
-        specifier: ^1.0.0
-        version: 1.0.0
       commander:
         specifier: ^12.1.0
         version: 12.1.0
@@ -562,10 +559,6 @@ packages:
 
   bl@4.1.0:
     resolution: {integrity: sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==}
-
-  borgor-boris@1.0.0:
-    resolution: {integrity: sha512-xn0UO75BtlOSZGn479h3Og0egE5Klta1VLwHL5r+q40Ia7+rxqNNvGdBgVNXVxNWA5BymspGCBfm5x6rAvYcNA==}
-    hasBin: true
 
   brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
@@ -1678,19 +1671,6 @@ snapshots:
       buffer: 5.7.1
       inherits: 2.0.4
       readable-stream: 3.6.2
-
-  borgor-boris@1.0.0:
-    dependencies:
-      '@octokit/rest': 21.0.2
-      axios: 1.7.7
-      commander: 12.1.0
-      git-clone: 0.2.0
-      inquirer: 11.0.2
-      inversify: 6.0.2
-      ora: 5.4.1
-      reflect-metadata: 0.2.2
-    transitivePeerDependencies:
-      - debug
 
   brace-expansion@1.1.11:
     dependencies:
