@@ -6,7 +6,7 @@
   "publishConfig": {
     "access": "public",
     "publish-branch": "production",
-    "no-git-checks": false
+    "git-checks": false
   },
   "bin": {
     "goris": "bin/goris"
