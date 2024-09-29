@@ -11,6 +11,7 @@ export interface PromptAnswer {
   projectName: string;
   projectPath: string;
   template: string;
+  createGitRepo: boolean;
   branch: string;
   description: string;
 }
@@ -75,8 +76,14 @@ export class CommandPrompt {
     {
       name: "description",
       message: "Enter a description",
-      default: "A new project",
+      default: "A new boris project",
       type: "input",
+    },
+    {
+      name: "createGitRepo",
+      message: "Initialize a git repository",
+      default: "Y",
+      type: "confirm",
     },
   ];
 

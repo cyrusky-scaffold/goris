@@ -52,6 +52,7 @@ export class CommandRegister {
             answer.branch,
           );
           await this.fixProjectInfo(answer.projectPath, answer);
+          await this.fixProjectFiles(answer.projectPath, answer);
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (error) {
           process.exit(1);
@@ -68,7 +69,7 @@ export class CommandRegister {
     try {
       spinner.start("Cloning repo...");
       if (fs.existsSync(projectPath)) {
-        spinner.fail("Project already exists");
+        spinner.fail(`The path is not empty [${projectPath}]`);
         process.exit(1);
       }
       await GitUtils.cloneGitRepo(projectPath, html_url, branch);
@@ -88,6 +89,25 @@ export class CommandRegister {
       packageJson.name = answer.projectName;
       packageJson.description = answer.description;
       fs.writeFileSync(jsonPath, JSON.stringify(packageJson, null, 2));
+    }
+  }
+
+  private async fixProjectFiles(projectPath: string, answer: PromptAnswer) {
+    GitUtils.clearGitRepo(projectPath);
+    if (!answer.createGitRepo) {
+      return;
+    }
+
+    const spinner = ora();
+    try {
+      spinner.start("Initializing git repo...");
+      await GitUtils.initGitRepo(projectPath);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
+      spinner.fail("Failed to initialize git repo");
+      process.exit(1);
+    } finally {
+      spinner.stop();
     }
   }
 }
