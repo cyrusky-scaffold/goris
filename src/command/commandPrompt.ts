@@ -6,6 +6,7 @@ import { GitHubRepo } from "@/types/githubRepo";
 import process from "process";
 import { PromptUtils } from "@/utils/PromptUtils";
 import { DEFAULT_BRANCH } from "@/constants/templates";
+import { PackageManagerUtils } from "@/utils/packageManager";
 
 export interface PromptAnswer {
   projectName: string;
@@ -14,6 +15,7 @@ export interface PromptAnswer {
   createGitRepo: boolean;
   branch: string;
   description: string;
+  packageManager: string;
 }
 
 @injectable()
@@ -84,6 +86,14 @@ export class CommandPrompt {
       message: "Initialize a git repository",
       default: "Y",
       type: "confirm",
+    },
+    {
+      name: "Package manager",
+      message: "Choose a package manager",
+      type: "list",
+      choices: async () => {
+        return await PackageManagerUtils.getPackageManagerList();
+      },
     },
   ];
 

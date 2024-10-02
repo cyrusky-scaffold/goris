@@ -7,6 +7,7 @@ import { GitUtils } from "@/utils/gitUtils";
 import ora from "ora";
 import * as fs from "node:fs";
 import * as path from "node:path";
+import { PackageManagerUtils } from "@/utils/packageManager";
 
 @injectable()
 export class CommandRegister {
@@ -53,6 +54,11 @@ export class CommandRegister {
           );
           await this.fixProjectInfo(answer.projectPath, answer);
           await this.fixProjectFiles(answer.projectPath, answer);
+
+          await PackageManagerUtils.restorePackages(
+            answer.packageManager,
+            answer.projectPath,
+          );
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (error) {
           process.exit(1);
